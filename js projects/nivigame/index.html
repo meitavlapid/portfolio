@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משחק השלם את הדמות</title>
+    <script src="nivigame.js" defer></script>
+    <link rel="stylesheet" href="nivigame.css">
+</head>
+
+<body>
+    <h1>השלם את הדמות!</h1>
+    <div id="character-container">
+        <img id="current-part" class="character-part" src="" alt="חלק של דמות">
+    </div>
+    <div class="options">
+        <img class="character-part option" src="img/catdown.png" alt="Option 1" onclick="checkAnswer('cat')">
+        <img class="character-part option" src="img/dinodown.png" alt="Option 2" onclick="checkAnswer('dog')">
+        <img class="character-part option" src="img/Elsadown.png" alt="Option 1" onclick="checkAnswer('Elsa')">
+        <img class="character-part option" src="img/Olafdwn.png" alt="Option 1" onclick="checkAnswer('Olaf')">
+        <img class="character-part option" src="img/princessdown.png" alt="Option 1" onclick="checkAnswer('princess')">
+        <img class="character-part option" src="img/dinodown.png" alt="Option 1" onclick="checkAnswer('dino')">
+        <img class="character-part option" src="img/rabbitdown.png" alt="Option 1" onclick="checkAnswer('rabbit')">
+    </div>
+    <div id="message"></div>
+    <div id="full-character-container" style="display: none;">
+        <img id="full-character" src="" alt="תמונה שלמה">
+    </div>
+</body>
+
+</html>
