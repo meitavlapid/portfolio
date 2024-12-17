@@ -11,9 +11,9 @@ export default class BoardController {
     this.cellWidth = cell.width + 1;
     this.cellheight = cell.height + 1;
     this.offsetX =
-      (context.canvas.width - this.cellWidth * this.board.boadWidth) / 3;
+      (context.canvas.width - this.cellWidth * this.board.boadWidth) / 2;
     this.offsetY =
-      (context.canvas.height - this.cellheight * this.board.boadHeight) / 4;
+      (context.canvas.height - this.cellheight * this.board.boadHeight) / 2;
     this.board.cells.forEach((cellCoords) => {
       window.requestAnimationFrame(() => {
         context.drawImage(
