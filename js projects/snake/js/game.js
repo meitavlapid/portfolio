@@ -13,8 +13,8 @@ export default class Game {
     this.maxHeight = 360;
     this.width = 0;
     this.height = 0;
-    this.centerX = this.context.canvas.width / 2;
-    this.centerY = this.context.canvas.height / 2;
+    this.centerX = this.context.canvas.width / 4;
+    this.centerY = this.context.canvas.height / 4;
     this.score = 0;
   }
   async preload() {
