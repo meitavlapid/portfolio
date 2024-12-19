@@ -12,6 +12,8 @@
 }
 
 body {
+  width: 100%;
+  height: auto;
   font-family: "Teko", sans-serif;
   background-color: #fff;
   line-height: 1.6;
@@ -130,13 +132,17 @@ section#main p {
 .techIcons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  padding: 1rem 0;
 }
 
 .techIcons img {
-  width: 6%;
-  height: 6%;
+  object-fit: contain;
+  max-width: 90px;
+  max-height: 90px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 #about {
@@ -223,14 +229,14 @@ section#main p {
 
 @media (300px <=width <=800px) {
   #gallery .card {
-    width: 100%;
+    width: auto;
     height: auto;
     grid-column: 1;
     grid-row: auto;
-    justify-items: center;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 0 auto;
+    inset-inline-start: 50px;
   }
 }
 
@@ -352,6 +358,7 @@ section#main p {
     align-content: center;
     text-align: center;
     margin: auto;
+    inset-inline-start: 85px;
   }
 }
 
@@ -458,22 +465,43 @@ section#main p {
 
 div#contact {
   width: 100%;
-  height: 15%;
+  height: auto;
   background: #fdc1b4;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
+  text-align: center;
   justify-content: space-evenly;
   text-align: center;
-  padding: 2vh;
+}
+#contact a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact a:hover {
+  background-color: #355e58c7;
+  color: #ffedd1;
+}
+#contact img {
+  width: 24px;
+  height: 24px;
+  object-fit: fill;
+  justify-items: left;
 }
 
 @media (300px <=width <=800px) {
   div#contact {
     width: 100%;
-    height: 60%;
+    height: auto;
     background: #fdc1b4;
-    display: flex;
-    position: absolute;
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
@@ -481,22 +509,14 @@ div#contact {
   }
 
   div#contact img {
-    width: 7%;
-    height: 30%;
+    width: 24px;
+    height: 24px;
     object-fit: fill;
-    margin-top: 0%;
     justify-items: left;
   }
 }
 
-div.facebook img {
-  width: 30%;
-  height: 20%;
-  object-fit: contain;
-  margin-top: 35%;
-}
-
-div.facebook figcaption {
+#contact figcaption {
   width: 100%;
   height: 100%;
   color: #355e58;
@@ -504,79 +524,34 @@ div.facebook figcaption {
   font-size: 1.1em;
 }
 
-div.Phone img {
-  width: 30%;
-  height: 20%;
-  object-fit: contain;
-  margin-top: 35%;
-}
-
-div.Phone figcaption {
-  width: 100%;
-  height: 100%;
-  color: #355e58;
-  font-family: "Teko", sans-serif;
-  font-size: 1.1em;
-}
-
-div.whatsapp img {
-  width: 30%;
-  height: 20%;
-  object-fit: contain;
-  margin-top: 35%;
-}
-
-div.whatsapp figcaption {
-  width: 100%;
-  height: 100%;
-  color: #355e58;
-  font-family: "Teko", sans-serif;
-  font-size: 1.1em;
-}
-
-div.email img {
-  width: 30%;
-  height: 20%;
-  object-fit: contain;
-  margin-top: 20%;
-}
-
-div.email figcaption {
-  width: 100%;
-  height: 100%;
-  color: #355e58;
-  font-family: "Teko", sans-serif;
-  font-size: 1.1em;
-}
-
-div.location img {
-  width: 30%;
-  height: 20%;
-  object-fit: contain;
-  margin-top: 40%;
-}
-
-div.location figcaption {
-  width: 100%;
-  height: 100%;
-  color: #355e58;
-  font-family: "Teko", sans-serif;
-  font-size: 1.1em;
+#contact figcaption:hover {
+  color: #ffedd1;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
   background: #355e58dc;
   color: #fdc1b4;
   font-size: 1rem;
-  border-top: 4px solid #fdc1b4;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   width: 100%;
-  height: 7%;
+  height: 3%;
 }
 
 footer p {
   margin: auto;
+}
+
+@media (300px <=width <=800px) {
+  footer {
+    text-align: center;
+    background: #355e58dc;
+    color: #fdc1b4;
+    font-size: 1rem;
+    position: sticky;
+    margin-bottom: 0;
+    width: 100%;
+    height: 3%;
+  }
 }
