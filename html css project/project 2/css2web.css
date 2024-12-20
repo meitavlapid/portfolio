@@ -206,8 +206,6 @@ div form div.email {
   height: 100%;
   font-size: 1.1em;
   text-align: left;
-
-  /* left: 14.5vw; */
 }
 
 @media (max-width: 760px) {
@@ -244,7 +242,6 @@ div form div.send {
   padding-top: 0vh;
 
   position: relative;
-  /* align-self: center; */
 }
 
 @media (max-width: 760px) {

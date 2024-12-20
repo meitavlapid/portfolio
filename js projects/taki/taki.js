@@ -395,12 +395,10 @@ async function sleep(ms = 1000) {
 }
 
 function renderGameUI() {
-  // Update all visual elements
   renderPlayerHand();
   renderOpponentCards();
   updateCentralCard();
 
-  // Update active player highlighting
   const positions = ["player-hand", "left-player", "right-player"];
   positions.forEach((pos, index) => {
     const element = document.getElementById(pos);
@@ -413,7 +411,6 @@ function renderGameUI() {
     }
   });
 
-  // Update turn indicator message
   if (gameState.currentTurnIndex === 0) {
     updateMessage("התור שלך!");
   }

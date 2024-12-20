@@ -140,10 +140,10 @@ export default class Game {
     } else {
       this.fitHeight();
     }
-    const dpr = window.devicePixelRatio || 1; // חישוב DPR (דחיסת פיקסלים)
-    this.context.canvas.width = this.width * dpr; // הגדרת רוחב הקנבס לפי DPR
-    this.context.canvas.height = this.height * dpr; // הגדרת גובה הקנבס לפי DPR
-    this.context.scale(dpr, dpr); // מתאם את הציור לגודל החדש של הקנבס
+    const dpr = window.devicePixelRatio || 1;
+    this.context.canvas.width = this.width * dpr;
+    this.context.canvas.height = this.height * dpr;
+    this.context.scale(dpr, dpr);
 
     this.canvas.style.width = `${this.width}px`;
     this.canvas.style.height = `${this.height}px`;

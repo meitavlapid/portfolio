@@ -320,7 +320,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* רקע כהה חצי שקוף */
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -338,7 +338,7 @@ h1 {
 }
 
 .popUpBox button {
-  background-color: #4caf50; /* ירוק */
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -349,7 +349,7 @@ h1 {
 }
 
 .popUpBox button:hover {
-  background-color: #45a049; /* גוון כהה יותר בירוק */
+  background-color: #45a049;
 }
 
 @keyframes pulse {
